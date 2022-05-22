@@ -2,7 +2,7 @@
 using namespace std;
 char matrix[3][3] = { '1', '2', '3', '4', '5', '6', '7', '8', '9' };
 char player = 'X';
-int n;
+int cnt;
 void Matrix()
 {
 	system("cls");
@@ -161,7 +161,7 @@ int main()
 	Matrix();
 	while (true)
 	{
-		n++;
+		cnt++;
 		Input();
 		Matrix();
 		if (Win() == 'X')
@@ -173,7 +173,7 @@ int main()
 		{
 			cout << "O is the winner!" << endl;
 			break;
-		}else if(Win() == '#' && n == 9){
+		}else if(Win() == '#' && cnt == 9){
             cout << "Game is over! There is no winner :(" << endl; 
 		}
 		Players();
